@@ -72,7 +72,15 @@ as long as they're present in the channel mapping.
     ],
     "channelMapping": { // Maps each Slack-channel to an IRC-channel, used to direct messages to the correct place
       "#slack": "#irc channel-password", // Add channel keys after the channel name
-      "privategroup": "#other-channel" // No hash in front of private groups
+      "privategroup": "#other-channel", // No hash in front of private groups
+      "#slack2": "#irc2",
+      "#slack3": "#irc3"
+    },
+    "slackChannelMute": {
+        "#slack2": true // IRC messages from #irc2 will not be sent to this Slack channel
+    },
+    "ircChannelMute": {
+        "#irc3": true // Slack messages from #slack3 will not be sent to this IRC channel
     },
     "ircOptions": { // Optional node-irc options
       "floodProtection": false, // On by default
